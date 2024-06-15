@@ -1,0 +1,15 @@
+
+
+services:
+  postgresdb:
+    image: postgres:15.3
+    container_name: my-postgres-db
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=damonbalam
+      - POSTGRES_PASSWORD=123456
+      - POSTGRES_DB=nodepg
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
